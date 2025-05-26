@@ -1,15 +1,17 @@
 /* Variables de tema */
 :root {
-    --primary-color: #0d6efd;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
     --secondary-color: #6c757d;
     --bg-color: #ffffff;
-    --text-color: #212529;
+    --text-color: #1f2937;
     --card-bg: #ffffff;
-    --card-text: #212529;
-    --nav-bg: #0d6efd;
+    --card-text: #1f2937;
+    --nav-bg: #2563eb;
     --nav-text: #ffffff;
-    --border-color: #dee2e6;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
 }
 
 /* Variables para modo oscuro */
@@ -29,7 +31,9 @@ body {
     font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    transition: var(--transition);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Smooth scroll behavior */
@@ -54,8 +58,18 @@ html {
 
 .card {
     background-color: var(--card-bg);
-    border-color: var(--border-color);
+    border: none;
+    border-radius: 10px;
     color: var(--card-text);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: var(--transition);
+    height: 100%;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-header,
@@ -75,28 +89,119 @@ html {
 .hero-img {
     max-width: 300px;
     border: 5px solid var(--primary-color);
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Sobre Mí */
+.about-content h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.about-content h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+    border-radius: 2px;
+}
+
+.about-content .lead {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.about-image {
+    position: relative;
+    z-index: 1;
+}
+
+.about-image img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.02);
+}
+
+.experience-badge {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-badge h4 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.experience-badge p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.about-content .fa-check-circle {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.about-content .col-sm-6:hover .fa-check-circle {
+    transform: scale(1.2);
+}
+
+.about-content .col-sm-6 {
+    margin-bottom: 10px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
 /* Section styles */
 section {
-    padding: 80px 0;
+    padding: 100px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: var(--primary-color);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
+    border-radius: 2px;
 }
 
 /* Botón de cambio de tema */
@@ -115,14 +220,25 @@ h2::after {
 }
 
 /* Button styles */
+.btn {
+    transition: var(--transition);
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 .btn-outline-primary {
