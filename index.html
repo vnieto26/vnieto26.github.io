@@ -6,7 +6,29 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Portafolio profesional de Víctor Nieto Olivo - Desarrollador Web">
+  <meta name="description" content="Portafolio profesional de Víctor Nieto Olivo - Desarrollador Web y Técnico en Hardware y Software con más de 20 años de experiencia">
+  <meta name="keywords" content="desarrollador web, técnico hardware, técnico software, programador, PHP, JavaScript, HTML, CSS, Bootstrap, Cartagena, Colombia">
+  <meta name="author" content="Víctor Nieto Olivo">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vnieto26.github.io/">
+  <meta property="og:title" content="Víctor Nieto - Desarrollador Web - Técnico en Hardware y Software">
+  <meta property="og:description" content="Portafolio profesional de Víctor Nieto Olivo - Desarrollador Web y Técnico en Hardware y Software con más de 20 años de experiencia">
+  <meta property="og:image" content="https://vnieto26.github.io/img/imagen.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vnieto26.github.io/">
+  <meta property="twitter:title" content="Víctor Nieto - Desarrollador Web - Técnico en Hardware y Software">
+  <meta property="twitter:description" content="Portafolio profesional de Víctor Nieto Olivo - Desarrollador Web y Técnico en Hardware y Software con más de 20 años de experiencia">
+  <meta property="twitter:image" content="https://vnieto26.github.io/img/imagen.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
   <!-- Google Fonts: Montserrat and Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +91,7 @@
           <p class="lead">Apasionado por crear soluciones web innovadoras y funcionales. Con experiencias de más de 20 años en Hardware y Software.</p>
           <div class="mt-4">
             <a href="#contacto" class="btn btn-primary btn-lg me-3">Contactar</a>
-            <a href="#" class="btn btn-outline-primary btn-lg">Descargar CV</a>
+            <a href="./docs/CV_Victor_Nieto.pdf" class="btn btn-outline-primary btn-lg" download>Descargar CV</a>
           </div>
         </div>
         <div class="col-lg-4">
@@ -128,7 +150,7 @@
               </div>
             </div>
             <a href="#contacto" class="btn btn-primary me-3">Contáctame</a>
-            <a href="#" class="btn btn-outline-primary">Ver CV</a>
+            <a href="./docs/CV_Victor_Nieto.pdf" class="btn btn-outline-primary" target="_blank">Ver CV</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -279,67 +301,20 @@
   <section id="proyectos" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-5 text-primary">Proyectos Destacados</h2>
-      <div class="row g-4">
-        <!-- Proyecto 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./img/proyecto1.jpg" class="card-img-top" alt="Proyecto E-commerce">
-            <div class="card-body">
-              <h5 class="card-title">Tienda Online</h5>
-              <p class="card-text">Desarrollo de una tienda online completa con sistema de carrito, checkout y gestión
-                de inventario.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="badge bg-primary me-2">React.js</div>
-                <div class="badge bg-success">Node.js</div>
-                <div class="badge bg-warning">MongoDB</div>
-              </div>
-            </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="btn btn-primary btn-sm me-2">Ver Proyecto</a>
-              <a href="https://github.com/vnieto26" class="btn btn-outline-primary btn-sm">Código</a>
-            </div>
-          </div>
+      
+      <!-- Filtros de proyectos -->
+      <div class="text-center mb-4">
+        <div class="btn-group" role="group" aria-label="Filtros de proyectos">
+          <button type="button" class="btn btn-outline-primary project-filter active" data-filter="all">Todos</button>
+          <button type="button" class="btn btn-outline-primary project-filter" data-filter="php">PHP</button>
+          <button type="button" class="btn btn-outline-primary project-filter" data-filter="react">React</button>
+          <button type="button" class="btn btn-outline-primary project-filter" data-filter="vue">Vue.js</button>
         </div>
-
-        <!-- Proyecto 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./img/proyecto2.jpg" class="card-img-top" alt="Proyecto Dashboard">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Dashboard Administrativo</h5>
-              <p class="card-text">Panel de control con visualizaciones en tiempo real y gestión de usuarios.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="badge bg-primary me-2">Vue.js</div>
-                <div class="badge bg-success">PHP</div>
-                <div class="badge bg-warning">MySQL</div>
-              </div>
-            </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="btn btn-primary btn-sm me-2">Ver Proyecto</a>
-              <a href="https://github.com/vnieto26" class="btn btn-outline-primary btn-sm">Código</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <img src="./img/proyecto3.jpg" class="card-img-top" alt="Proyecto Blog">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Blog Personal</h5>
-              <p class="card-text">Sistema de gestión de contenido con editor WYSIWYG y categorías.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="badge bg-primary me-2">JavaScript</div>
-                <div class="badge bg-success">Laravel</div>
-                <div class="badge bg-warning">Bootstrap</div>
-              </div>
-            </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="#" class="btn btn-primary btn-sm me-2">Ver Proyecto</a>
-              <a href="https://github.com/vnieto26" class="btn btn-outline-primary btn-sm">Código</a>
-            </div>
-          </div>
-        </div>
+      </div>
+      
+      <!-- Container de proyectos -->
+      <div class="row g-4" id="projects-container">
+        <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
       </div>
     </div>
   </section>
@@ -455,6 +430,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/themes.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/analytics.js"></script>
 </body>
 
 </html>

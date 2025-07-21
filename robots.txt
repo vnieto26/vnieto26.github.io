@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vnieto26.github.io/sitemap.xml
+
+# Disallow specific files
+Disallow: /docs/
+Disallow: *.pdf
+
+# Allow CSS and JS files
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Crawl delay (optional)
+Crawl-delay: 1
